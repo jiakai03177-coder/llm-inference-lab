@@ -31,7 +31,7 @@
 | | Week 11 | 手写 PagedAttention 显存分页块管理器 | `src/block_manager.py`<br>`benchmarks/benchmark_block_manager.py` | [week11_paged_attention_block_manager.md](reports/week11_paged_attention_block_manager.md) | ✅ 已完成 |
 | | Week 12 | 拆解阅读 vLLM 官方核心源码与端到端全链路 | 源码架构解析 | [week12_vllm_source_code_tour.md](reports/week12_vllm_source_code_tour.md) | ✅ 已完成 |
 | **第四阶段**<br>量化与推理优化 | Week 13 | 低精度量化基础 (FP16 vs INT8 vs INT4) | `src/quantization_basics.py`<br>`benchmarks/benchmark_quantization.py` | [week13_quantization_basics.md](reports/week13_quantization_basics.md) | ✅ 已完成 |
-| | Week 14 | 激活感知量化 (AWQ) 与 GPTQ 算法 | `src/awq_toy.py` | 进行中 | 🚀 进行中 |
+| | Week 14 | 激活感知量化 (AWQ) 与 GPTQ 算法 | `src/awq_toy.py`<br>`benchmarks/benchmark_advanced_quant.py` | [week14_advanced_quantization.md](reports/week14_advanced_quantization.md) | ✅ 已完成 |
 
 ---
 
@@ -56,7 +56,8 @@ llm-inference-lab/
 │   ├── kv_cache_demo.py       # KV Cache 显存与单步延迟对比
 │   ├── continuous_batching_benchmark.py
 │   ├── benchmark_block_manager.py # 显存碎片率与并发仿真
-│   └── benchmark_quantization.py   # 4096 规模矩阵 4 种精度实测
+│   ├── benchmark_quantization.py   # 4096 规模矩阵 4 种精度实测
+│   └── benchmark_advanced_quant.py # FP16 vs INT4 vs AWQ vs GPTQ 核心算法大比拼
 ├── reports/                   # 历周实验分析报告与实测数据
 ├── scripts/                   # 交互工具与客户端
 │   └── chat_cli.py            # 本地流式交互对话终端
@@ -87,3 +88,10 @@ python benchmarks/benchmark_quantization.py
 ```bash
 python src/awq_toy.py
 ```
+
+### 5. 运行进阶量化算法大比拼 (FP16 vs 普通 INT4 vs AWQ vs GPTQ)
+```bash
+python benchmarks/benchmark_advanced_quant.py
+```
+
+
