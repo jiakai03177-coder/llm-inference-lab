@@ -1,0 +1,168 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "timestamp": "2026-09-15 16:04:11",
+  "workloads": {
+    "short_in_short_out": {
+      "name": "短进短出 (Short-In, Short-Out)",
+      "desc": "意图识别/简要问答 (Prompt ~25 tokens, Output ~30 tokens)",
+      "benchmarks": [
+        {
+          "concurrency": 1,
+          "total_requests": 1,
+          "total_tokens": 30,
+          "batch_elapsed_time": 0.24412632499979736,
+          "throughput": 122.88719784736408,
+          "avg_ttft_ms": 39.623249000214855,
+          "p95_ttft_ms": 39.623249000214855,
+          "avg_tpot_ms": 7.006688896549819,
+          "avg_latency_s": 0.24281722700015962,
+          "p95_latency_s": 0.24281722700015962
+        },
+        {
+          "concurrency": 2,
+          "total_requests": 2,
+          "total_tokens": 60,
+          "batch_elapsed_time": 0.2576859770001647,
+          "throughput": 232.84154108223612,
+          "avg_ttft_ms": 56.67048299983435,
+          "p95_ttft_ms": 57.82857799977137,
+          "avg_tpot_ms": 6.790415517249631,
+          "avg_latency_s": 0.25359253300007367,
+          "p95_latency_s": 0.25605948100019305
+        },
+        {
+          "concurrency": 4,
+          "total_requests": 4,
+          "total_tokens": 109,
+          "batch_elapsed_time": 0.28625515900012033,
+          "throughput": 380.77916352925604,
+          "avg_ttft_ms": 69.01077174995862,
+          "p95_ttft_ms": 71.76373799984503,
+          "avg_tpot_ms": 7.530569284479888,
+          "avg_latency_s": 0.265546231999906,
+          "p95_latency_s": 0.285316660999797
+        },
+        {
+          "concurrency": 8,
+          "total_requests": 8,
+          "total_tokens": 210,
+          "batch_elapsed_time": 0.3228845140001795,
+          "throughput": 650.3873394184624,
+          "avg_ttft_ms": 124.38518137497567,
+          "p95_ttft_ms": 128.49416200015185,
+          "avg_tpot_ms": 6.663322106765766,
+          "avg_latency_s": 0.2927062744999489,
+          "p95_latency_s": 0.322062520000145
+        }
+      ]
+    },
+    "long_in_short_out": {
+      "name": "长进短出 (Long-In, Short-Out)",
+      "desc": "长文本摘要/长文档问答 (Prompt ~550 tokens, Output ~30 tokens)",
+      "benchmarks": [
+        {
+          "concurrency": 1,
+          "total_requests": 1,
+          "total_tokens": 26,
+          "batch_elapsed_time": 0.25375197400035177,
+          "throughput": 102.46225710135346,
+          "avg_ttft_ms": 106.04325599979347,
+          "p95_ttft_ms": 106.04325599979347,
+          "avg_tpot_ms": 5.8850729600089835,
+          "avg_latency_s": 0.25317008000001806,
+          "p95_latency_s": 0.25317008000001806
+        },
+        {
+          "concurrency": 2,
+          "total_requests": 2,
+          "total_tokens": 59,
+          "batch_elapsed_time": 0.32181230000014693,
+          "throughput": 183.3366841477876,
+          "avg_ttft_ms": 120.33998600009,
+          "p95_ttft_ms": 121.02170200023465,
+          "avg_tpot_ms": 6.966989670561608,
+          "avg_latency_s": 0.318819140999949,
+          "p95_latency_s": 0.32058024700017995
+        },
+        {
+          "concurrency": 4,
+          "total_requests": 4,
+          "total_tokens": 120,
+          "batch_elapsed_time": 0.26527924699985306,
+          "throughput": 452.35351561468536,
+          "avg_ttft_ms": 59.01345000006586,
+          "p95_ttft_ms": 60.52177399988068,
+          "avg_tpot_ms": 7.010844586202752,
+          "avg_latency_s": 0.26232794299994566,
+          "p95_latency_s": 0.2641889269998501
+        },
+        {
+          "concurrency": 8,
+          "total_requests": 8,
+          "total_tokens": 226,
+          "batch_elapsed_time": 0.2614358389996596,
+          "throughput": 864.4568428902139,
+          "avg_ttft_ms": 58.48953362504972,
+          "p95_ttft_ms": 61.37744199986628,
+          "avg_tpot_ms": 6.863749122451577,
+          "avg_latency_s": 0.24541572399999723,
+          "p95_latency_s": 0.26081004399975427
+        }
+      ]
+    },
+    "short_in_long_out": {
+      "name": "短进长出 (Short-In, Long-Out)",
+      "desc": "创意写作/复杂代码生成 (Prompt ~25 tokens, Output ~220 tokens)",
+      "benchmarks": [
+        {
+          "concurrency": 1,
+          "total_requests": 1,
+          "total_tokens": 217,
+          "batch_elapsed_time": 1.3170931499998915,
+          "throughput": 164.7567599907553,
+          "avg_ttft_ms": 22.466780999820912,
+          "p95_ttft_ms": 22.466780999820912,
+          "avg_tpot_ms": 5.991747328704588,
+          "avg_latency_s": 1.316684204000012,
+          "p95_latency_s": 1.316684204000012
+        },
+        {
+          "concurrency": 2,
+          "total_requests": 2,
+          "total_tokens": 438,
+          "batch_elapsed_time": 1.4502495739998267,
+          "throughput": 302.01698235427466,
+          "avg_ttft_ms": 34.809213000016825,
+          "p95_ttft_ms": 36.740932000157045,
+          "avg_tpot_ms": 6.481329285661287,
+          "avg_latency_s": 1.4477096114999313,
+          "p95_latency_s": 1.4495661000000837
+        },
+        {
+          "concurrency": 4,
+          "total_requests": 4,
+          "total_tokens": 874,
+          "batch_elapsed_time": 1.3266637110000374,
+          "throughput": 658.7954375726309,
+          "avg_ttft_ms": 32.44217600001775,
+          "p95_ttft_ms": 33.7951480000811,
+          "avg_tpot_ms": 5.936582834635583,
+          "avg_latency_s": 1.3234574477500018,
+          "p95_latency_s": 1.3254795509997166
+        },
+        {
+          "concurrency": 8,
+          "total_requests": 8,
+          "total_tokens": 1748,
+          "batch_elapsed_time": 1.1767765559998224,
+          "throughput": 1485.4136846011943,
+          "avg_ttft_ms": 49.32460462492827,
+          "p95_ttft_ms": 51.976314000057755,
+          "avg_tpot_ms": 5.166165928744184,
+          "avg_latency_s": 1.1729218068749105,
+          "p95_latency_s": 1.1755798469998808
+        }
+      ]
+    }
+  }
+}

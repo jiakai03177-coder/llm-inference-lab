@@ -1,0 +1,58 @@
+# ====================================================
+# Git Ignore for llm-inference-lab
+# ====================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C / C++ / CUDA compiled binaries
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+test_cu
+test_gemm
+benchmarks/flash_attn_demo
+benchmarks/matmul_cuda
+benchmarks/vector_add
+
+# Large Model Weights and Checkpoints
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.gguf
+*.h5
+*.ckpt
+models/
+huggingface/
+.cache/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+*.env
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary & Log files
+*.log
+*.tmp
+*.temp
+DUMP*
+DumpStack.log
