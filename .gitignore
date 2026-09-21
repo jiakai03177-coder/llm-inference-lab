@@ -7,6 +7,25 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Test, type-checker, lint, and notebook caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.tox/
+.nox/
+
+# Coverage reports
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Python packaging and build output
+build/
+dist/
+*.egg-info/
+
 # C / C++ / CUDA compiled binaries
 *.o
 *.obj
@@ -40,7 +59,10 @@ huggingface/
 venv/
 env/
 ENV/
+.env
+.env.*
 *.env
+!.env.example
 
 # IDE and Editors
 .vscode/
@@ -49,6 +71,7 @@ ENV/
 *.swo
 *~
 .DS_Store
+Thumbs.db
 
 # Temporary & Log files
 *.log
